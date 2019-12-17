@@ -2,7 +2,7 @@ require 'json'
 package = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
-  s.name                = "RCTSplashScreen"
+  s.name                = "rn-splash-screen"
   s.version             = package["version"]
   s.summary             = package["description"]
   s.license             = package['license']
@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.platform            = :ios, "8.0"
   s.preserve_paths      = 'README.md', 'package.json', '*.js'
   s.source_files        = 'ios/RCTSplashScreen/**/*.{h,m}'
+  s.dependency 'React'
 end
